@@ -1,0 +1,14 @@
+<mat-card class="todo-list-container" *ngIf="todoList.length; else noItems">
+  <mat-list class="todo-list">
+    <mat-list-item *ngFor="let todo of todoList; let i = index">
+      <mat-checkbox [checked]="todo.checked" (change)="changeItemCheck(i)" class="todo-item">{{ todo.text }}</mat-checkbox>
+      <button type="button" mat-button mat-icon-button (click)="deleteItem(i)"><mat-icon>delete</mat-icon></button>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
+<ng-template #noItems>
+  <mat-card>
+    No todos for now.
+  </mat-card>
+</ng-template>

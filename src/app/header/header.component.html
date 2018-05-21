@@ -1,0 +1,6 @@
+<mat-toolbar class="header" color="primary">
+  <form [formGroup]="addTodoForm" (submit)="submitForm()">
+    <input type="text" formControlName="todoText" placeholder="Task title">
+    <button type="submit" mat-button><mat-icon>add</mat-icon>Add todo</button>
+  </form>
+</mat-toolbar>

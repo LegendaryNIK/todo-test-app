@@ -1,0 +1,16 @@
+:host {
+  width: 70%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .mat-checkbox {
+    display: flex;
+    align-items: center;
+  }
+  .right-side {
+    flex-shrink: 0;
+  }
+}

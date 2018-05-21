@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">To-do app</mat-toolbar>
+<div class="container">
+
+  <app-header (todoAdded)="addTodo($event)"></app-header>
+
+  <app-controls [allChecked]="checkAllChecked() | async"
+                (allCheck)="checkAll()"
+                (deleteAll)="deleteAll()"
+                (deleteSelected)="deleteSelected()"></app-controls>
+
+  <app-todo-list [todoList]="getTodoList() | async"
+                 (itemChecked)="changeItemCheck($event)"
+                 (itemDeleted)="deleteItem($event)"></app-todo-list>
+
+</div>
+
